@@ -1,5 +1,5 @@
 
-
+@layer normalize {
 /* Document
    ========================================================================== */
 
@@ -75,9 +75,9 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 
-a {
+/* a {
     background-color: transparent;
-}
+} */
 
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -178,10 +178,10 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 
-button,
-input { /* 1 */
-    overflow: visible;
-}
+  button,
+  input { /* 1 */
+      overflow: visible;
+  }
 
 /* Видалення дурного зовнішнього світіння в Webkit */
 input:focus
@@ -510,7 +510,6 @@ main::-webkit-scrollbar {
   display: none !important;
 }
 
-a,
 abbr,
 acronym,
 address,
@@ -939,3 +938,4 @@ input:-webkit-autofill {
   box-shadow: none;
 }
 
+}
