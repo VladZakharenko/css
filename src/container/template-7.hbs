@@ -1,0 +1,63 @@
+{{#with header}}
+<header class="header">
+    <div>
+        {{>logo-7 logo=brandName}}
+    </div>
+    <nav>
+        {{> nav list=links}}
+    </nav>
+
+</header>
+<div class="sub_header">
+    <div>
+        <span class="ad_bage">Ad</span>
+        <a class="ad_text" href="{{ad.url}}">{{ad.text}}</a>
+    </div>
+    <p>Users online: {{userOnline}}</p>
+</div>
+
+{{/with}}
+
+{{#with hero}}
+<div class="hero">
+    <h1 class="hero_title">{{title}}</h1>
+    <p class="hero_text"> {{description}}</p>
+    <button class="hero_button" href={{button.url}}>{{button.text}}</button>
+</div>
+{{/with}}
+
+{{#with about}}
+<div class="about">
+    <h1 class="about_head">{{heading}}</h1>
+    <p class="about_info">{{info}}</p>
+</div>
+{{/with}}
+
+<div class="articles">
+    <h1 class="articles_head">Our Articles</h1>
+    <div>
+        <button class="articles_button" href="#">View All<button>
+    </div>
+</div>
+
+<main class="main">
+    {{#each articles}}
+    {{> card_articles data=this}}
+
+    {{/each}}
+</main>
+
+<footer class="footer">
+    {{#with footer}}
+
+    <div class="nav nav_inline">
+        {{#each pages}}
+        <a class="nav_link" href={{path}}>{{name}}</a>
+        {{/each}}
+    </div>
+
+    <div>
+        <span class="footer_copyright">Copyright 2023-2024</span>
+    </div>
+    {{/with}}
+</footer>
